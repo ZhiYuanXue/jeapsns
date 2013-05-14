@@ -1,0 +1,12 @@
+    <title>Jeapsns -by django</title>
+    <h1><font color=#{{color}}>Django ,uliweb jeapedu.com</font></h1>
+
+<form action="/edit/{{id}}/" method="post">
+{% csrf_token %}
+
+    <table>
+	{{ f }}
+    </table>
+    <hr>
+ <input type="submit" value="发送">
+</form>

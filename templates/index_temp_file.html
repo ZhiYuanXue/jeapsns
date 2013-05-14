@@ -1,0 +1,31 @@
+    <title>Jeapsns -by django</title>
+    <h1><font color=#{{color}}>Django ,uliweb jeapedu.com</font></h1>
+<style>
+a{
+  border-style:solid;
+  border-color:#666;
+  border-width:1px;
+  background:#cccccc;
+  border-radius:15px ;
+  margin: 1px 1px 1px 1px;
+  padding: 5px 5px 5px 5px;
+  display:inline-block;
+}
+</style>
+
+
+<form action="/index_save/" method="post">
+{% csrf_token %}
+
+    <table>
+	{{ f }}
+    </table>
+    <hr>
+ <input type="submit" value="发送">
+</form>
+{% for n in all%}
+	<li>{{n.name}}
+		<a href="/delete/{{n.id}}">删除</a>
+		<a href="/edit/{{n.id}}">编辑</a>
+        </li>
+{%endfor%}
